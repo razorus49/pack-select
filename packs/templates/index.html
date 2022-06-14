@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content%}
+    <h1>Packs</h1>
+    <div class="row">
+        {% for packs in packs %}
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ packs.image_url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ packs.name}}</h5>
+                    <p class="card-text">{{packs.rating }}, {{packs.description}}, {{packs.download_link}}</p>
+                    <a href="#" class="btn btn-primary">download</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock%}
